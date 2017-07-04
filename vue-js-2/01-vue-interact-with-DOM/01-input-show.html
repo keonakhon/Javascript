@@ -8,6 +8,7 @@
   <body>
     <div id="app">
       <input type="text" v-on:input="changeTitle">
+      <h3 v-once>{{ title }}</h3>
       <p>{{ title }} - <a v-bind:href="link" target="_">Google</a></p>
     </div>
     <script src="https://unpkg.com/vue"></script>
