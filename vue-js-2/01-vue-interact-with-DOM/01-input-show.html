@@ -8,14 +8,15 @@
   <body>
     <div id="app">
       <input type="text" v-on:input="changeTitle">
-      <p>{{ title }}</p>
+      <p>{{ title }} - <a v-bind:href="link" target="_">Google</a></p>
     </div>
     <script src="https://unpkg.com/vue"></script>
     <script>
     	new Vue({
       	el: '#app',
         data: {
-        	title: 'Hello World!'
+        	title: 'Hello World!',
+          link: 'https://www.google.com'
         },
         methods: {
         	changeTitle: function(event) {
