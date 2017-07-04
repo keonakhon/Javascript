@@ -10,6 +10,8 @@
       <input type="text" v-on:input="changeTitle">
       <h3 v-once>{{ title }}</h3>
       <p>{{ title }} - <a v-bind:href="link" target="_">Google</a></p>
+      <hr>
+      <p v-html="finishedLink"></p>
     </div>
     <script src="https://unpkg.com/vue"></script>
     <script>
@@ -17,7 +19,8 @@
       	el: '#app',
         data: {
         	title: 'Hello World!',
-          link: 'https://www.google.com'
+          link: 'https://www.google.com',
+          finishedLink: '<a href="https://www.google.com" target="_">Google</a>'
         },
         methods: {
         	changeTitle: function(event) {
