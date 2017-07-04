@@ -7,6 +7,7 @@
   </head>
   <body>
   <div id="app">
+    <input type="text" v-on:keyup.enter="alertMe">
     <p>{{ counter }}</p>
     <button v-on:click="increase">+1</button>
   </div>
@@ -20,6 +21,9 @@
       methods: {
         increase: function() {
           this.counter++;
+        },
+        alertMe: function() {
+          alert('Alert!');
         }
       }
     });
