@@ -32,6 +32,14 @@
             console.log('computed');
             return this.secondCounter > 5 ? 'bigger 5' : 'smaller 5';
           }
+        },
+        watch : {
+          counter: function() {
+            let vm = this;
+            setTimeout(function() {
+            	vm.counter = 0;
+            }, 2000);
+          }
         }
       });
     </script>
