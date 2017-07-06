@@ -4,18 +4,18 @@
   <head>
     <meta charset="utf-8">
     <title></title>
+    <style>
+      .demo {
+        width: 100px;
+        height: 100px;
+        background-color: gray;
+        display: inline-block;
+        margin: 10px;
+      }
+      .blue { background-color: blue; }
+      .red { background-color: red; }
+    </style>
   </head>
-  <style>
-  .demo {
-    width: 100px;
-    height: 100px;
-    background-color: gray;
-    display: inline-block;
-    margin: 10px;
-  }
-  .blue { background-color: blue; }
-  .red { background-color: red; }
-  </style>
   <body>
     <div id="app">
       <div class="demo" @click="attachRed = !attachRed" :class="{red: attachRed}"></div>
