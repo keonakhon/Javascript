@@ -14,12 +14,13 @@
       }
       .blue { background-color: blue; }
       .red { background-color: red; }
+      .green { background-color: green; }
     </style>
   </head>
   <body>
     <div id="app">
-      <div class="demo" @click="attachRed = !attachRed" :class="{red: attachRed}"></div>
-      <div class="demo"></div>
+      <div class="demo" @click="attachRed = !attachRed" :class="divClasses"></div>
+      <div class="demo" :class="{red: attachRed}"></div>
       <div class="demo"></div>
     </div>
     <script src="https://unpkg.com/vue"></script>
@@ -28,6 +29,14 @@
         el: '#app',
         data: {
           attachRed: false
+        },
+        computed: {
+        	divClasses: function() {
+            return {
+              red: this.attachRed,
+              blue: !this.attachRed
+            };
+          }
         }
       });
     </script>
