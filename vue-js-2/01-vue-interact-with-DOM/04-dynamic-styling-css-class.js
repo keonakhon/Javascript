@@ -21,14 +21,17 @@
     <div id="app">
       <div class="demo" @click="attachRed = !attachRed" :class="divClasses"></div>
       <div class="demo" :class="{red: attachRed}"></div>
-      <div class="demo"></div>
+      <div class="demo" :class="color"></div>
+      <hr>
+      <input type="text" v-model="color">
     </div>
     <script src="https://unpkg.com/vue"></script>
     <script>
       new Vue({
         el: '#app',
         data: {
-          attachRed: false
+          attachRed: false,
+          color: 'green'
         },
         computed: {
         	divClasses: function() {
