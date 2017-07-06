@@ -7,9 +7,10 @@
   </head>
   <body>
     <div id="app">
-      <button v-on:click="counter++">+1</button>
-      <button v-on:click="counter--">-1</button>
-      <button v-on:click="secondCounter++">computed +1</button>
+      <button @click="counter++">+1</button> <!-- // "@" is the shorthand/shortcut of v-on: -->
+      <button @click="counter--">-1</button>
+      <button @click="secondCounter++">computed +1</button>
+      <a :href="link">Google.com</a> <!-- // ":" is the shorthand/shortcut of v-bind: -->
       <p>methods: {{ counter }} || {{ output() }}</p>
       <p>computed: {{ secondCounter }} || {{ result }}</p>
     </div>
@@ -19,7 +20,8 @@
         el: '#app',
         data: {
           counter: 0,
-          secondCounter: 0
+          secondCounter: 0,
+          link: 'https://www.google.com'
         },
         methods: {
           output: function() {
